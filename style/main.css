@@ -1,0 +1,336 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "font";
+    outline: none;
+    transition: 0.3s;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    caret-color: var(--main);
+
+}
+
+:root{
+    --sec: rgb(115 189 255);
+    --text: white;
+    --main: rgb(74, 122, 167);
+    --bg_1: rgb(246 246 246);
+    --bg_2: #ebebeb;
+    --bg_3: #c0c0c0;
+    --bg_4:rgb(23, 48, 71);
+    --bshadow:0 5px 15px rgba(0, 0, 0, 0.445);
+}
+
+body{
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+::details-content{
+    color: red;
+}
+.wp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+    animation-name: animation_1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+.col{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(134deg,rgba(74, 122, 167, 1) 0%, rgba(87, 199, 133, 0) 50%, rgba(74, 122, 167, 1) 100%);
+    opacity: 0.3;
+}
+@keyframes animation_1 {
+    from{
+        filter: brightness(1) blur(0px)
+    }
+    to{
+        filter:brightness(0.3) blur(8px)
+    }
+}
+
+main{
+
+    background-color: var(--bg_1);
+    z-index: 1;
+    backdrop-filter: blur(50px);
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 1rem 0;
+}
+body > section{
+    display: flex
+;
+    position: absolute;
+    height: 500px;
+    width: 65dvw;
+    border-radius: 15px;
+    overflow: hidden;
+    animation-name: animation_2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    transform: translateY(200%)
+}
+@keyframes animation_2 {
+    from{
+        transform: translateY(200%);
+
+    }
+    60%{
+
+    transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
+}
+.imag{
+    width: 40%;
+    background-color: var(--bg_2);
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100px;
+    color: var(--main);
+}
+
+main header{
+    font-size: 1.7rem;
+    border-bottom: 2px solid var(--main);
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+    font-weight: 800;
+}
+main .form{
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+}
+main section{
+        width: 100%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    align-items: center;
+
+}
+.inps{
+        width: 100%;
+    display: flex
+;
+    flex-direction: column;
+    gap: 25px;
+}
+.inps .field{
+    height: 40px;
+    position: relative;
+    display: flex
+;
+    align-items: center;
+
+    justify-content: end;
+    box-shadow: var(--bshadow);
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 5px;
+}
+.field .ico{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--text);
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    color:black;
+        background-color: transparent;
+}
+.active .ico{
+    color: var(--sec);
+}
+.inps .field input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+.det{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.det > div{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+.det input{
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--main);
+    height: 12px;
+    aspect-ratio: 1;
+    cursor: pointer;
+
+}
+.det input:checked{
+    background-color: var(--main);
+}
+.det p{
+    color: var(--main);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 800;
+}
+.det p:hover{
+    color: var(--sec);
+}
+.login{
+    width: 100%;
+    background-color: var(--main);
+    font-weight: 800;
+    height: 15%;
+    color: var(--text);
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: var(--bshadow);
+
+}
+.student{
+    width: 100%;
+    display: flex
+;
+    gap: 10px;
+    justify-content: space-around;
+
+}
+.student button{
+        position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.student button i{
+        aspect-ratio: 1;
+
+    font-weight: 800;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg_3);
+    box-shadow: var(--bshadow);
+    padding: 0.8rem;
+}
+.student button span{
+
+    position: absolute;
+    bottom: -2.3rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--main);
+    font-size: 0.7rem;
+    color: var(--text);
+    opacity: 0;
+    z-index: -1;
+
+}
+.student button:hover span{
+    opacity: 1;
+}
+
+.student .active i{
+    background-color: var(--text);
+        transform: scale(1.2);
+        color: var(--sec);
+
+}
+.login:hover{
+    background-color: var(--sec);
+}
+@media (max-width:910px) {
+
+    body > section{
+        width: 80dvw;
+    }
+}
+@media (max-width:790px) {
+    .imag{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+
+}
+@media (max-width:550px) {
+
+    html{
+        font-size: 14px;
+    }
+    .field  input{
+        font-size: 1rem !important;
+    }
+}
+@media (max-width:460px) {
+
+    html{
+        font-size: 13px;
+    }
+       body > section{
+        height: 450px;
+        width: 90dvw;
+    }
+
+    .form{
+        width: 90%;
+    }
+
+}
+
+
