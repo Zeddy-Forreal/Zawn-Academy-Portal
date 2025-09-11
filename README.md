@@ -19,7 +19,7 @@ A sleek and animated login form built with HTML, CSS, and JavaScript. Includes u
 ## 🚀 Live Demo
 
 Try it here 👇  
-https://zeddy-foreal.github.io/login-form
+https://zeddy-forreal.github.io/login-form
 
 ## 📸 Preview
 
@@ -28,7 +28,7 @@ https://zeddy-foreal.github.io/login-form
 ## 📁 How to Run Locally
 
 ```bash
-git clone https://github.com/zeddy-foreal/login-form.git
+git clone https://github.com/zeddy-forreal/login-form.git
 cd login-form
 # Then open index.html in your browser
 
