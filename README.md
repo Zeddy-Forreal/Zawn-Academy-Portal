@@ -51,15 +51,6 @@ start index.html
 xdg-open index.html
 ```
 
-**3. Add your wallpaper**
-
-Drop a campus, library, or hall photo into a `media/` folder next to `index.html` as `wallpaper.jpg`. The page falls back to a CSS-only navy gradient backdrop if no image is supplied.
-
-```
-media/
-└── wallpaper.jpg
-```
-
 ---
 
 ## 📁 File Structure
