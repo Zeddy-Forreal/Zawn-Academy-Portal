@@ -3,52 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style/FontAwesome_Icons/all.min.css">
-    <link rel="stylesheet" href="style/FontAwesome_Icons/fontawesome.min.css">
+    <title>Zawn Academy — Student Portal</title>
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="static/Font/font.css">
-    <link rel="icon" href="static/ST_brand/icon.png">
+    <link rel="icon" href="static/icon.png">
 </head>
 <body>
 
     <div class="wp"></div>
-    <div class="col"></div>
-    <section>
-        <div class="imag"><i class="fa-solid fa-right-to-bracket"></i></div>
-    <main >
-        
-        <div class="form">
-            <header>Welcome Back !!</header>
-            <section>
-                <div class="inps">
-                    <div class="field">
-                    <div class="ico"><i class="fa-solid fa-user-lock"></i></div>
-                    <input type="text" placeholder="Username" name="" id="">
-                </div>
-                <div class="field">
-                    <div class="ico"><i class="fa-solid fa-lock"></i></div>
-                    <input type="password" placeholder="Password" name="" id="">
-                </div>
-                <div class="det">
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <label>Remember me</label>
-                    </div>
-                    <p>Forgot Password ?</p>
-                </div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <section class="portal">
+
+        <!-- ───── CREST PANEL ───── -->
+        <div class="crest-panel">
+            <div class="crest-pattern"></div>
+
+            <div class="crest-content">
+                <div class="crest-seal">
+                    <svg viewBox="0 0 120 120" class="seal-svg">
+                        <circle cx="60" cy="60" r="56" class="seal-ring-outer"/>
+                        <circle cx="60" cy="60" r="48" class="seal-ring-inner"/>
+                        <path id="seal-text-path" d="M 60,12 A 48,48 0 1 1 59.9,12" fill="none"/>
+                        <text class="seal-motto">
+                            <textPath href="#seal-text-path" startOffset="0%">EST. 1891 • ZAWN ACADEMY • L PILTOVER •</textPath>
+                        </text>
+                        <g class="seal-emblem">
+                            <path d="M60 38 L78 48 L78 68 Q78 82 60 90 Q42 82 42 68 L42 48 Z" class="emblem-shield"/>
+                            <path d="M60 48 L52 64 L68 64 Z" class="emblem-book-l"/>
+                            <line x1="60" y1="48" x2="60" y2="78" class="emblem-spine"/>
+                            <path d="M60 48 L68 64 L52 64 Z" class="emblem-book-r" transform="translate(0,0)"/>
+                        </g>
+                    </svg>
                 </div>
 
-                <div class="student">
-                    <button data-title="User" class="active"><span>User</span><i class="fa-solid fa-user"></i></button>
+                <h1 class="crest-title">ZAWN<br>Academy</h1>
+                <p class="crest-divider"><span></span>established 1891<span></span></p>
+                <p class="crest-quote">"Knowledge kept in trust,<br>character carried forward."</p>
+            </div>
 
-                    <button  data-title="Admin"><span>Admin</span><i class="fa-solid fa-user-tie"></i></button>
-                </div>
-            </section>
-            <button class="login">LOG IN</button>
+            <div class="crest-footer">
+                <p>Digital Campus Portal</p>
+            </div>
         </div>
-    </main>
+
+        <!-- ───── FORM PANEL ───── -->
+        <main class="form-panel">
+
+            <div class="form">
+
+                <header>
+                    <p class="eyebrow">Welcome back</p>
+                    <h2>Sign in to continue</h2>
+                </header>
+
+                <div class="role-select">
+                    <button data-title="Student" class="role active">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Z"/><path d="M5 13.18v4L12 21l7-3.82v-4"/></svg>
+                        <span>Student</span>
+                    </button>
+                    <button data-title="Faculty" class="role">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>Faculty</span>
+                    </button>
+                </div>
+
+                <div class="fields">
+
+                    <div class="field">
+                        <input type="text" placeholder=" " id="username" required>
+                        <label for="username">Student ID or Email</label>
+                        <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+                    </div>
+
+                    <div class="field">
+                        <input type="password" placeholder=" " id="password" required>
+                        <label for="password">Password</label>
+                        <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="11" width="16" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    </div>
+
+                </div>
+
+                <div class="det">
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        <span class="check-box"></span>
+                        Remember me
+                    </label>
+                    <a class="forgot">Forgot password?</a>
+                </div>
+
+                <button class="login">
+                    <span>Enter Portal</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+
+                <p class="help">
+                    Trouble signing in? Contact the <a>Registrar's Office</a>
+                </p>
+
+            </div>
+
+        </main>
+
     </section>
-    <script src="javascript/main.js"></script>
+
+    <script src="script/main.js"></script>
 </body>
 </html>
